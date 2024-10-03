@@ -3,7 +3,8 @@ import TodoItem from './TodoItem';
 import TodoForm from './TodoForm';
 import { getId } from '../utils/getId';
 
-function TodoList(props) {
+function TodoListSignal(props) {
+  //создание сигнала при помощи хука useSignal
   const todos = useSignal([]);
 
   useSignalEffect(() => {
@@ -56,4 +57,4 @@ function TodoList(props) {
   );
 }
 
-export default TodoList;
+export default TodoListSignal;

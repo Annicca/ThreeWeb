@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'preact/hooks';
-import TodoItem from './TodoItem';
+import TodoItem from '../components/TodoItem';
 import { getId } from '../utils/getId';
-import TodoForm from './TodoForm';
+import TodoForm from '../components/TodoForm';
 
 function TodoList(props) {
   const [todos, setTodos] = useState([]);

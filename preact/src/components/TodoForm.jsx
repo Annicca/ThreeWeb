@@ -1,5 +1,9 @@
 import { useRef } from 'preact/hooks';
 
+// Неконтролируемый, так как Preact не устанавливает значение
+{/* <input onInput={myEventHandler} />; */}
+
+//Контролируемые формы реализуются при помощи refs 
 function TodoForm(props) {
   // Создаем ссылку для привязки к элементу `input` с помощью атрибута `ref` (см. разметку)
   const inputRef = useRef(null);
