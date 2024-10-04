@@ -1,0 +1,55 @@
+@import '../../utils/scss/const.scss';
+
+.footer{
+    flex: 0 0 auto;
+    width: 100%;
+    background-color: $yellow;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 35px;
+        padding-bottom: 35px;
+
+        @media(max-width: map-get($breackpoints, tablet)) {
+            padding-bottom: 85px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+        }
+    }
+
+    &__list{
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-count: 2;
+        column-gap: 4em;
+        row-gap: 10px;
+    }
+
+    &__link{
+        font-weight: 500;
+        color:$black;
+        &:hover{
+            transition: color 0.3s ease-in-out;
+            color: $white;
+        }
+    }
+
+    &__social{
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        margin-top: 10px;
+    }
+    
+    &__title{
+        font-weight: 600;
+        line-height: 19px;
+    }
+}

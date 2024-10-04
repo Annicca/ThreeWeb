@@ -1,0 +1,22 @@
+@import "utils/scss/const.scss";
+
+.yellow {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: $yellow;
+  color: $white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  &:hover {
+    background-color: $yellow660;
+  }
+  &:disabled {
+    background-color: $border-gray;
+  }
+
+  @media (max-width: map-get($breackpoints, laptop)) {
+    font-size: 12px;
+  }
+}
