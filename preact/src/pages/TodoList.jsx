@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'preact/hooks';
-import TodoItem from '../components/TodoItem';
 import { getId } from '../utils/getId';
+import TodoItem from '../components/TodoItem';
 import TodoForm from '../components/TodoForm';
 
-function TodoList(props) {
+export function TodoList(props) {
   const [todos, setTodos] = useState([]);
 
   // Подгружаем задачи с сервера при загрузке страницы
@@ -62,5 +62,3 @@ function TodoList(props) {
     </div>
   );
 }
-
-export default TodoList;
