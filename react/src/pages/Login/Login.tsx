@@ -16,7 +16,7 @@ export const Login: FC = () => {
 
   const {
     register,
-    formState: { errors },
+    formState: { errors, isValid },
     handleSubmit,
   } = useForm<ILoginRequest>({
     mode: "onBlur",
@@ -70,7 +70,7 @@ export const Login: FC = () => {
           })}
           error={errors.password && errors.password.message}
         />
-        <Button type="submit" disabled = {!!errors}>Войти</Button>
+        <Button type="submit" disabled = {!isValid} >Войти</Button>
       </form>
     </div>
   );
