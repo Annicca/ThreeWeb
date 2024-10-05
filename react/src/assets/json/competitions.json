@@ -1,0 +1,146 @@
+[
+    {
+        "idCompetition": 1,
+        "organizer": {
+            "idUser": 1,
+            "surnameUser": "Назаров",
+            "nameUser": "Николай",
+            "patronimycUser": "Владимирович",
+            "loginUser": "nazarov",
+            "mailUser": "nazarov@mail.ru",
+            "phoneUser": "880005553535",
+            "role": "ORGANIZER"
+        },
+        "nameCompetition": "Конкурс",
+        "descriptionCompetition": "Описание описание",
+        "dateStart": "2024-10-04",
+        "dateFinish": "2024-14-04",
+        "cityCompetition": {
+            "idCity": 1,
+            "city": "Москва"
+        },
+        "statusCompetition": "STARTED",
+        "img": null,
+        "competitionFee": 500
+    },
+    {
+        "idCompetition": 2,
+        "organizer": {
+            "idUser": 1,
+            "surnameUser": "Назаров",
+            "nameUser": "Николай",
+            "patronimycUser": "Владимирович",
+            "loginUser": "nazarov",
+            "mailUser": "nazarov@mail.ru",
+            "phoneUser": "880005553535",
+            "role": "ORGANIZER"
+        },
+        "nameCompetition": "Новый талант",
+        "descriptionCompetition": "Описание описание",
+        "dateStart": "2024-10-04",
+        "dateFinish": "2024-14-04",
+        "cityCompetition": {
+            "idCity": 2,
+            "city": "Владимир"
+        },
+        "statusCompetition": "STARTED",
+        "img": null,
+        "competitionFee": 500
+    },
+    {
+        "idCompetition": 3,
+        "organizer": {
+            "idUser": 1,
+            "surnameUser": "Назаров",
+            "nameUser": "Николай",
+            "patronimycUser": "Владимирович",
+            "loginUser": "nazarov",
+            "mailUser": "nazarov@mail.ru",
+            "phoneUser": "880005553535",
+            "role": "ORGANIZER"
+        },
+        "nameCompetition": "Новый талант",
+        "descriptionCompetition": "Описание описание",
+        "dateStart": "2024-10-04",
+        "dateFinish": "2024-14-04",
+        "cityCompetition": {
+            "idCity": 1,
+            "city": "Москва"
+        },
+        "statusCompetition": "STARTED",
+        "img": null,
+        "competitionFee": 500
+    },
+    {
+        "idCompetition": 4,
+        "organizer": {
+            "idUser": 1,
+            "surnameUser": "Назаров",
+            "nameUser": "Николай",
+            "patronimycUser": "Владимирович",
+            "loginUser": "nazarov",
+            "mailUser": "nazarov@mail.ru",
+            "phoneUser": "880005553535",
+            "role": "ORGANIZER"
+        },
+        "nameCompetition": "Новый талант",
+        "descriptionCompetition": "Описание описание",
+        "dateStart": "2024-10-04",
+        "dateFinish": "2024-14-04",
+        "cityCompetition": {
+            "idCity": 1,
+            "city": "Москва"
+        },
+        "statusCompetition": "STARTED",
+        "img": null,
+        "competitionFee": 500
+    },
+    {
+        "idCompetition": 5,
+        "organizer": {
+            "idUser": 1,
+            "surnameUser": "Назаров",
+            "nameUser": "Николай",
+            "patronimycUser": "Владимирович",
+            "loginUser": "nazarov",
+            "mailUser": "nazarov@mail.ru",
+            "phoneUser": "880005553535",
+            "role": "ORGANIZER"
+        },
+        "nameCompetition": "Новый талант",
+        "descriptionCompetition": "Описание описание",
+        "dateStart": "2024-10-04",
+        "dateFinish": "2024-14-04",
+        "cityCompetition": {
+            "idCity": 1,
+            "city": "Москва"
+        },
+        "statusCompetition": "STARTED",
+        "img": null,
+        "competitionFee": 500
+    },
+    {
+        "idCompetition": 6,
+        "organizer": {
+            "idUser": 1,
+            "surnameUser": "Назаров",
+            "nameUser": "Николай",
+            "patronimycUser": "Владимирович",
+            "loginUser": "nazarov",
+            "mailUser": "nazarov@mail.ru",
+            "phoneUser": "880005553535",
+            "role": "ORGANIZER"
+        },
+        "nameCompetition": "Новый талант",
+        "descriptionCompetition": "Описание описание",
+        "dateStart": "2024-10-04",
+        "dateFinish": "2024-14-04",
+        "cityCompetition": {
+            "idCity": 1,
+            "city": "Москва"
+        },
+        "statusCompetition": "STARTED",
+        "img": null,
+        "competitionFee": 500
+    }
+]
