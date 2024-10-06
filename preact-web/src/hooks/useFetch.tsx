@@ -1,13 +1,16 @@
-import { useEffect, useState } from "preact/hooks"
+import { useSignal } from "@preact/signals"
+import { useEffect } from "preact/hooks"
 
 export const useFetch = (url: string) => {
-    const [data, setData] = useState()
+    const data = useSignal([])
 
     useEffect(() => {
       fetch(url)
         .then((res) => res.json())
-        .then((data) => setData(data))
+        .then((current) => {
+          data.value = current
+        })
     },[])
 
-    return data
+    return data.value
 }

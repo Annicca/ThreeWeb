@@ -11,7 +11,6 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "preact",
 		"skipLibCheck": true,
-		// "types": ["vite-plugin-svgr/client"],
 		"baseUrl": "./",
 		"paths": {
 			"react": ["./node_modules/preact/compat/"],
