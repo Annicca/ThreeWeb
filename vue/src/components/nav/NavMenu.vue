@@ -2,7 +2,7 @@
 import { RouterLink } from 'vue-router'
 import IconCompetitions from '@/components/icons/IconCompetitions.vue'
 import IconLk from '@/components/icons/IconLk.vue'
-import constants from '@/utils/ts/constants.ts'
+import constants from '@/utils/ts/constants'
 import styles from './NavMenu.module.scss'
 </script>
 

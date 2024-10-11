@@ -22,34 +22,4 @@
           grid-template-columns: 1fr;
         }
     }
-
-    &_groups {
-      display: grid;
-      width: 100%;
-      grid-template-columns: repeat(3,  calc(100% / 3 - 2%));
-      justify-content: space-between;
-
-      @media (max-width: map-get($breackpoints, desktop)){
-        // grid-template-columns: repeat(2,  calc(100% / 2 - 1%));
-        row-gap: 40px;
-      }
-    
-      @media (max-width: map-get($breackpoints, laptop)){
-        grid-template-columns: 1fr;
-      }
-    }
-    &Container{
-      width: 100%;
-    }
-
-    &_statements {
-      display: grid;
-      width: 50%;
-      margin: 0 auto;
-      row-gap: 60px;
-
-      @media (max-width: map-get($breackpoints, laptop)){
-        width: 100%;
-      }
-    }
 }

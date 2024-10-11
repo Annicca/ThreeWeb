@@ -4,7 +4,7 @@ import IconLogo from '@/components/icons/IconLogo.vue'
 import IconArrowLeft from '@/components/icons/IconArrowLeft.vue'
 import LinkItem from '@/components/link/LinkItem.vue'
 import UIButton from '@/uikit/button/UIButton.vue'
-import constants from '@/utils/ts/constants.ts'
+import constants from '@/utils/ts/constants'
 import styles from './Header.module.scss'
 
 const router = useRouter()

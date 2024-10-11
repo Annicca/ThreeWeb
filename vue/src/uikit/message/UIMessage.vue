@@ -1,12 +1,6 @@
-<template>
-  <div :class="[{ [styles.message_error]: type === ETypeMessage.ERROR }, styles.message]">
-    {{ text }}
-  </div>
-</template>
-
-<script setupe lang="ts">
+<script setup lang="ts">
 import { defineProps } from 'vue'
-import ETypeMessage from '@/types/ETypeMessage'
+import { ETypeMessage } from '@/types/ETypeMessage'
 import styles from './Message.module.scss'
 
 interface MessageProps {
@@ -16,3 +10,9 @@ interface MessageProps {
 
 const props = defineProps<MessageProps>()
 </script>
+
+<template>
+  <div :class="[{ [styles.message_error]: type === ETypeMessage.ERROR }, styles.message]">
+    {{ text }}
+  </div>
+</template>

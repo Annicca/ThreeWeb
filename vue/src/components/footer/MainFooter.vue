@@ -10,10 +10,10 @@ import styles from './Footer.module.scss'
       <div :class="styles.footer__title">Мы в соц сетях:</div>
       <div :class="styles.footer__social">
         <a href="https://web.telegram.org/" target="_blank">
-          <IconTg :width="40" :height="40" :fill="black" />
+          <IconTg :width="40" :height="40" :fill="'black'" />
         </a>
         <a href="https://vk.com/" target="_blank">
-          <IconVk :width="40" :height="40" :fill="black" />
+          <IconVk :width="40" :height="40" :fill="'black'" />
         </a>
       </div>
     </div>
