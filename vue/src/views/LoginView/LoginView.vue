@@ -53,11 +53,12 @@ const onSubmit = handleSubmit((values) => {
         :error="errors.password"
         :label="'Пароль'"
         placeholder="Пароль"
+        autocomplete="'current-password'"
         v-model="password"
         v-bind="passwordProps"
       />
 
-      <UIButton type="submit" :disabledd="!!errors">
+      <UIButton type="submit" :disabled="!!errors">
         <template #default>Войти</template>
       </UIButton>
     </form>

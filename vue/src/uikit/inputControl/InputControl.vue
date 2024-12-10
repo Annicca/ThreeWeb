@@ -8,6 +8,7 @@ interface InputControlProps {
   error?: string
   modelValue?: string
   type: string
+  autocomplete?: string
 }
 
 const props = defineProps<InputControlProps>()
@@ -29,6 +30,7 @@ let id = 'input-' + Math.random()
       :id="id"
       :class="styles.input"
       :placeholder="placeholder || ''"
+      :autocomplete="autocomplete"
       @input="change"
       :modelValue="modelValue"
     />
