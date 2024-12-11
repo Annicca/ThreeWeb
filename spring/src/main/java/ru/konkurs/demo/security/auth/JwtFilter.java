@@ -32,7 +32,6 @@ public class JwtFilter extends OncePerRequestFilter {
             @NonNull FilterChain chain) throws ServletException, IOException {
 
         String token = request.getHeader("Authorization");
-
         if (token != null && token.startsWith("Bearer ")) {
             token = token.substring(7);
             String username = jwtService.getClaims(token).getSubject();

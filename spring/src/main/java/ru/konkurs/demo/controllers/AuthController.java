@@ -30,11 +30,4 @@ public class AuthController {
 
         return ResponseEntity.ok(auth);
     }
-
-    @GetMapping("/users")
-    public ResponseEntity users(){
-        System.out.println("aaa");
-
-        return ResponseEntity.ok("super");
-    }
 }

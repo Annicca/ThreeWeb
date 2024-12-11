@@ -1,7 +1,7 @@
 package ru.konkurs.demo.services;
 
 import jakarta.security.auth.message.AuthException;
-import org.springframework.http.HttpStatus;
+import org.springframework.core.io.UrlResource;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
@@ -11,10 +11,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.konkurs.demo.dto.AuthenticationRequestDTO;
 import ru.konkurs.demo.dto.AuthenticationResponseDTO;
+import ru.konkurs.demo.dto.ImageDTO;
 import ru.konkurs.demo.enums.Role;
 import ru.konkurs.demo.models.Profile;
 import ru.konkurs.demo.repositories.ProfileRepository;
 import ru.konkurs.demo.security.auth.JwtService;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.util.Optional;
 
 @Service
 public class ProfileService {
@@ -29,10 +34,17 @@ public class ProfileService {
     JwtService jwtService;
 
     @Autowired
+    private FileService fileServise;
+
+    @Autowired
     private AuthenticationManager authenticationManager;
 
     public Profile getByLogin(String login) {
         return profileRepository.getByLogin(login);
+    }
+
+    public Optional<Profile> getById(Integer id) {
+        return profileRepository.findById(id);
     }
 
     public AuthenticationResponseDTO register(Profile profile) {
@@ -64,4 +76,25 @@ public class ProfileService {
             throw new AuthException("Неверный логин или пароль");
         }
     }
+
+    public void saveAvatar(Integer profileId, ImageDTO img) throws IOException {
+        Optional<Profile> optProfile = profileRepository.findById(profileId);
+        if(optProfile.isPresent()) {
+            Profile profile = optProfile.get();
+            profile.setImg(fileServise.saveImg(img.getImg()));
+            profileRepository.save(profile);
+        }
+    }
+
+    public UrlResource downloadAvatar(Integer profileId) throws MalformedURLException {
+        Optional<Profile> optProfile = profileRepository.findById(profileId);
+        UrlResource resource = null;
+        if(optProfile.isPresent()) {
+            Profile profile = optProfile.get();
+            resource = fileServise.downloadFile(profile.getImg());
+        }
+
+        return resource;
+    }
+
 }
