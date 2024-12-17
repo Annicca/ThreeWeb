@@ -20,6 +20,7 @@ const upload = multer({ storage });
 router.patch(
   "/:userId/avatar",
   verifyProfileToken,
+  IsClient,
   upload.single("img"),
   fileController.saveAvatar
 );
@@ -28,6 +29,7 @@ router.patch(
 router.get(
   "/:userId/avatar/download",
   verifyProfileToken,
+  IsAdmin,
   fileController.downloadAvatar
 );
 
