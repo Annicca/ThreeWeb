@@ -1,0 +1,27 @@
+{
+  "name": "testbd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "faker": "node -r path src/seed.js",
+    "mongo-faker": "node -r path src/seedMongoDB.js",
+    "benchmark": "node -r path --max-old-space-size=4096 src/services/queryBenchmark.js",
+    "mongo-benchmark": "node -r path --max-old-space-size=4096 src/services/mongoQueryBenchmark.js",
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.1",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5",
+    "sequelize-cli": "^6.6.2"
+  }
+}
