@@ -15,6 +15,7 @@ class ProfileManager(BaseUserManager):
         return self.create_user(login, password, **extra_fields) 
         
 class Profile(AbstractBaseUser): 
+    db_table = "profile"
     ROLE_CHOICES = ( 
         ('ADMIN', 'Admin'), 
         ('CLIENT', 'Client'), 

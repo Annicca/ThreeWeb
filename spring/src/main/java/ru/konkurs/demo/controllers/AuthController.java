@@ -17,15 +17,15 @@ public class AuthController {
     private ProfileService service;
 
     @PostMapping("/login")
-    public ResponseEntity login(@RequestBody AuthenticationRequestDTO auth) throws AuthException {
+    public ResponseEntity<AuthenticationResponseDTO> login(@RequestBody AuthenticationRequestDTO auth) throws AuthException {
 
         return ResponseEntity.ok(service.authenticate(auth));
 
     }
 
     @PostMapping("/register")
-    public ResponseEntity register(@RequestBody Profile profile){
-        System.out.println("aaa");
+    public ResponseEntity<AuthenticationResponseDTO> register(@RequestBody Profile profile){
+        System.out.println(profile.getPassword());
         AuthenticationResponseDTO auth = service.register(profile);
 
         return ResponseEntity.ok(auth);

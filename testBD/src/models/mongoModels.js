@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const userSchema = new Schema({
   name: String,
-  email: { type: String },
+  email: { type: String, index: true },
   password: String,
   role: String,
   affiliation: String,
@@ -12,12 +12,12 @@ const conferenceSchema = new Schema({
   description: String,
   startDate: Date,
   endDate: Date,
-  location: String,
+  location: { type: String, index: true },
 });
 const submissionSchema = new Schema({
   title: String,
   abstract: String,
-  status: String,
+  status: { type: String, index: true },
   userId: { type: Schema.Types.ObjectId, ref: "User" },
   conferenceId: { type: Schema.Types.ObjectId, ref: "Conference" },
 });

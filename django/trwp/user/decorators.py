@@ -17,6 +17,6 @@ def role_required(allowed_roles=[]):
                     return HttpResponseForbidden("Unauthorized!") 
                 return view_func(request, *args, **kwargs) 
             except: 
-                return HttpResponseForbidden("Invalid token.") 
+                return HttpResponseForbidden() 
         return _wrapped_view 
     return decorator

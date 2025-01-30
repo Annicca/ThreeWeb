@@ -1,6 +1,7 @@
 package ru.konkurs.demo.services;
 
 import jakarta.security.auth.message.AuthException;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -86,9 +87,9 @@ public class ProfileService {
         }
     }
 
-    public UrlResource downloadAvatar(Integer profileId) throws MalformedURLException {
+    public FileSystemResource downloadAvatar(Integer profileId) throws MalformedURLException {
         Optional<Profile> optProfile = profileRepository.findById(profileId);
-        UrlResource resource = null;
+        FileSystemResource resource = null;
         if(optProfile.isPresent()) {
             Profile profile = optProfile.get();
             resource = fileServise.downloadFile(profile.getImg());

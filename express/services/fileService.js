@@ -4,22 +4,35 @@ const appRoot = require("app-root-path");
 
 const rootPath = appRoot.path;
 
+const allowedExtensions = [".png", ".jpg", ".jpeg", ".webp"];
+
 exports.saveAvatar = async (req, res) => {
   try {
     const userId = req.params.userId;
+
     const profile = await Profile.findById(userId);
     if (!profile) {
-      res.status(404).send("Пользователь не найден");
+      return res.status(404).send("Пользователь не найден");
     }
     const file = req.file;
+
     if (!file) {
-      res.status(400).send("Файл не был загружен");
+      return res.status(404).send("Файл не был загружен");
+    }
+    const fileExtension = path.extname(file.originalname).toLowerCase();
+
+    if (!allowedExtensions.includes(fileExtension)) {
+      return res
+        .status(404)
+        .send("Неверный формат файла, загрузите другой файл");
     }
     profile.img = file.filename;
+
     await profile.save();
-    res.status(200).send("Аватар успешно сохранен");
+
+    return res.status(200).send("");
   } catch (error) {
-    res.status(500).send("Ошибка сервера");
+    return res.status(500).send("");
   }
 };
 
@@ -30,5 +43,5 @@ exports.downloadAvatar = async (req, res) => {
   const filePath = path.join(rootPath, "public", "img", profile.img);
 
   res.setHeader("Content-Disposition", `attachment; filename="${filePath}"`);
-  res.sendFile(filePath);
+  return res.sendFile(filePath);
 };

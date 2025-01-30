@@ -6,8 +6,20 @@ const { faker } = require("@faker-js/faker");
 const NUM_RECORDS = 1000000;
 const BATCH_SIZE = 10000;
 
+async function dropCollections() {
+  try {
+    await User.collection.drop();
+    await Conference.collection.drop();
+    await Submission.collection.drop();
+  } catch (error) {
+    throw error;
+  }
+}
+
 async function generateData() {
   await mongoDB();
+
+  await dropCollections();
 
   for (let i = 0; i < NUM_RECORDS; i += BATCH_SIZE) {
     const users = [];

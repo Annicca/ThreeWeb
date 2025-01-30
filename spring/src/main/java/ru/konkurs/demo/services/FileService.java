@@ -1,5 +1,7 @@
 package ru.konkurs.demo.services;
 
+import jakarta.annotation.Resource;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MaxUploadSizeExceededException;
@@ -49,14 +51,10 @@ public class FileService {
         }
     }
 
-    public UrlResource downloadFile( String fileName) throws MalformedURLException {
-        Path filePath = imgPath.resolve(fileName).normalize();
-        UrlResource resource = null;
-        try {
-            resource = new UrlResource(filePath.toUri());
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
+    public FileSystemResource downloadFile(String fileName) throws MalformedURLException {
+        Path filePath = imgPath.resolve(fileName).normalize();;
+        FileSystemResource resource = null;
+        resource = new FileSystemResource(filePath);
         return resource;
     }
 
