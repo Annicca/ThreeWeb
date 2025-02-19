@@ -1,0 +1,124 @@
+.footer {
+  box-sizing: border-box;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 40px 20px 20px;
+  margin-top: 100px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: center;
+}
+
+.footer-section {
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-contacts p {
+  margin: 10px 0;
+}
+
+.footer-contacts a,
+.social-link {
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-contacts a:hover,
+.social-link:hover {
+  opacity: 1;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.social-link.vk::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20.8 7.74c.13-.42 0-.74-.64-.74h-2.12c-.54 0-.79.28-.92.6 0 0-1.08 2.62-2.6 4.32-.5.49-.72.65-.99.65-.13 0-.34-.16-.34-.58V7.74c0-.52-.14-.74-.56-.74H9.57c-.31 0-.5.24-.5.47 0 .49.74.6.81 1.98v2.99c0 .65-.12.77-.38.77-.72 0-2.46-2.63-3.49-5.64-.21-.58-.41-.81-.95-.81H3.04c-.6 0-.72.28-.72.6 0 .56.72 3.33 3.33 7C7.47 17.2 9.9 18.5 12.1 18.5c1.32 0 1.48-.3 1.48-.81v-1.87c0-.6.13-.72.55-.72.31 0 .85.16 2.1 1.36 1.43 1.43 1.67 2.07 2.47 2.07h2.12c.6 0 .9-.3.73-.88-.19-.59-.87-1.44-1.78-2.45-.49-.58-1.23-1.2-1.45-1.51-.31-.4-.22-.58 0-.94 0 0 2.58-3.63 2.85-4.86z'/%3E%3C/svg%3E");
+}
+
+.social-link.telegram::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.015-.15-.056-.212s-.174-.041-.248-.024c-.106.024-1.793 1.139-5.062 3.345-.478.329-.913.489-1.302.479-.428-.009-1.252-.242-1.865-.442-.752-.244-1.349-.374-1.297-.789.027-.216.324-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.333-1.386 4.025-1.627 4.476-1.635.403-.006 1.302.234 1.484.655.106.246.051.568.028.745z'/%3E%3C/svg%3E");
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-links {
+    align-items: center;
+  }
+}
+
+.footer-contacts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-contacts a::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.footer-contacts .location::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/%3E%3C/svg%3E");
+}
+
+.footer-contacts .phone::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z'/%3E%3C/svg%3E");
+}
+
+.footer-contacts .email::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+}
