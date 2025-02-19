@@ -1,0 +1,26 @@
+@import "../../styles/colors.css";
+
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--primary-blue); /* Синий цвет фона */
+  padding: 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.logo,
+.title {
+  display: inline;
+}
+
+.logo img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
